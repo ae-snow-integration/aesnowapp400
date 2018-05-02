@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[var myArray=[]; 
+myArray.length =0; 
+var selected_worflow=null;
+var wkfl_name=null; 
+var jsonObj= [];
+jsonObj.length = 0; 
+var mapData = {};
+mapData.params=[];
+mapData.params.length = 0;
+var aeNumber =0;
+var prevMappedData=null;
+function onLoad() {
+	 var url = new URL(window.location.href);
+     aeNumber = url.searchParams.get("number");
+         if(aeNumber !== null){ 
+		 var ga1 = new GlideAjax('GetWorkflow');
+	     ga1.addParam('sysparm_name','getprevMappedData');
+		 ga1.addParam('sysparm_name1',aeNumber);
+	     ga1.getXML(getMappedRowData);
+		 }
+	var ga = new GlideAjax('GetWorkflow');
+	ga.addParam('sysparm_name','GetWorkflow');
+	ga.getXML(populateRawJSOM);
+	getcatalog();
+}
+function getMappedRowData(res){
+	var rawData = res.responseXML.documentElement.getAttribute("answer");
+	var rowData=JSON.parse(rawData);
+	prevMappedData =rowData.wkName;
+	var catList = document.getElementById('cataloglist'); 
+	var catlistItem = document.createElement('option');
+    catlistItem.appendChild(document.createTextNode(rowData.catName));
+	catList.appendChild(catlistItem);
+	var wkList = document.getElementById('workflowlist'); 
+	var wklistItem= document.createElement('option');
+    wklistItem.appendChild(document.createTextNode(rowData.wkName));
+	wkList.appendChild(wklistItem);
+	var serviceReq = document.getElementById('catalogreq'); 
+	var serviceItem= document.createElement('option');
+    serviceItem.appendChild(document.createTextNode(rowData.request));
+	serviceReq.appendChild(serviceItem);
+	}
+function populateRawJSOM(workflowresponse){
+	var getWorkflow = workflowresponse.responseXML.documentElement.getAttribute("answer");
+	var raw_data=JSON.parse(getWorkflow);
+	var uulist = document.getElementById('workflowlist');	
+	var listItem = document.createElement('option');
+    listItem.appendChild(document.createTextNode('--None--'));
+    uulist.appendChild(listItem);
+	for(var i=0;i<raw_data.length;i++)
+		{
+		var b=raw_data[i];
+		for(var y in b)
+		{
+		var e=y;
+		var e1=b[e];
+		if(e=="name")
+		 {			 	     
+               if(aeNumber !== null && prevMappedData !== e1){ 
+			   var listItem1 = document.createElement('option');
+               listItem1.appendChild(document.createTextNode(e1));
+               uulist.appendChild(listItem1);	
+			   prevMappedData =null;
+	           } 
+		else{
+		var listItem2 = document.createElement('option');
+        listItem2.appendChild(document.createTextNode(e1));
+        uulist.appendChild(listItem2);	
+			   }
+			}
+		}
+		}
+	}
+function getcatalog()
+{
+	var ga = new GlideAjax('GetWorkflow');
+	ga.addParam('sysparm_name','GetCatalog');
+	ga.getXML(populateCatalog);
+}
+function populateCatalog(response)
+{
+var getCat = response.responseXML.documentElement.getAttribute("answer");
+var carr = getCat.evalJSON();
+var catlog=document.getElementById('catalogreq');
+for(var e=0;e<carr.length;e++)
+{
+var c1=carr[e];
+var catt= document.createElement('option');
+catt.appendChild(document.createTextNode(c1));
+catlog.appendChild(catt);		
+}
+	var ga = new GlideAjax('GetWorkflow');
+	ga.addParam('sysparm_name','GetWorkflow');
+}
+function getSelectedCatlogs(){
+	document.getElementById("cataloglist").options.length = 0;
+	var selected_catalog = document.getElementById("catalogreq").value;
+	var ga = new GlideAjax('GetWorkflow');
+	ga.addParam('sysparm_name','getCatItems');
+	ga.addParam('sysparm_name1', selected_catalog);
+	ga.getXML(populateCatItem);
+}
+
+function populateCatItem(response) {
+	var choices;
+	var catItem = response.responseXML.documentElement.getAttribute("answer");	
+	var b = catItem.evalJSON();
+	var catlogItemsList=document.getElementById('cataloglist');
+	var catList= document.createElement('option');
+	catList.appendChild(document.createTextNode('--None--'));
+	catlogItemsList.appendChild(catList);
+    for(var e=0;e<b.length;e++)
+	{
+		var m1=b[e];
+		catList= document.createElement('option');
+		catList.appendChild(document.createTextNode(m1));
+		catlogItemsList.appendChild(catList);
+		choices++;
+	}
+	}
+function fetchCatAttr(){
+	myArray.length=0;  
+	var selected_catalog_item = document.getElementById("cataloglist").value;
+	var ga = new GlideAjax('GetWorkflow');	
+	ga.addParam('sysparm_name','GetQuestions');
+	ga.addParam('sysparm_name1',selected_catalog_item);
+	ga.getXML(populateRawJSOM2);
+}
+function populateRawJSOM2(response){
+	var getWorkflow1 = response.responseXML.documentElement.getAttribute("answer");	
+	myArray = getWorkflow1.evalJSON(); 
+}
+function fetchWorkAttr() 
+{     
+	if (document.getElementById('dynamicTable') != null){ 
+	var noneList = document.getElementById('noneitem');  
+    if (noneList !== null) 
+	noneList.parentNode.removeChild(noneList);
+	else { 
+			var len= document.getElementById('dynamicTable').rows.length - 1;
+			for(var i=0;i<len;i++){
+	    	var catlist = document.getElementById('cataloglistattri'+i); 
+  			catlist.parentNode.removeChild(catlist);
+			}
+			}
+		var mytable = document.getElementById('dynamicTable');
+        mytable.parentNode.removeChild(mytable);
+		var saveButtn = document.getElementById('saveMapping');
+        saveButtn.parentNode.removeChild(saveButtn);
+		var cancleButton = document.getElementById("canclebuttn");
+    	cancleButton.parentNode.removeChild(cancleButton);
+	}
+	selected_worflow =	document.getElementById("workflowlist").value;
+	var ga = new GlideAjax('GetWorkflow');
+	ga.addParam('sysparm_name','GetWorkflow');
+	ga.getXML(populateWorkItem);
+}
+
+function populateWorkItem(workflowAttriresponse){
+ var getWorkflowAttr = workflowAttriresponse.responseXML.documentElement.getAttribute("answer");
+ var raw_data=JSON.parse(getWorkflowAttr);
+ console.log('raw_data:'+ raw_data);
+ var choice_index=0;
+ var choice_index1=0;
+ var saveButton= document.createElement('button');
+ var text = document.createTextNode("Save");
+ saveButton.appendChild(text);
+ saveButton.id="saveMapping";
+ saveButton.className="btn btn-primary";
+var cancleButton=document.createElement('button');
+text = document.createTextNode("Cancel");
+cancleButton.appendChild(text);
+cancleButton.id="canclebuttn";
+cancleButton.className="btn btn-primary";
+		var table = document.createElement('table');
+		table.id = "dynamicTable"; 
+		table.className="table table-hover table-stripped table-bordered";
+		var static_tr = document.createElement('tr');   
+		var static_td1 = document.createElement('th');
+		var static_td2 = document.createElement('th');
+		static_td1.appendChild(document.createTextNode('AE Workflow Attributes'));
+		static_td2.appendChild(document.createTextNode('SNOW Catalog Attributes'));
+		static_tr.appendChild(static_td1);
+		static_tr.appendChild(static_td2);
+		table.appendChild(static_tr);	
+for(var i=0;i<raw_data.length;i++)
+ {
+	var b=raw_data[i];
+	for(var y in b)
+	{
+	   var e=y;
+	   var e1=b[e];
+	   if(e1==selected_worflow)
+	   {
+	 for(var x=0;x<b.params.length;x++)
+		 {
+			var value1=b.params[x].name;
+			var tr = document.createElement('tr');   
+			var td1 = document.createElement('td');
+			var td2 = document.createElement('td');
+			td1.className="col-sm-6";
+			td2.className="col-sm-6";
+			var text1 = document.createTextNode(value1);
+			var catattlist = document.createElement('select');	
+			catattlist.id =	"cataloglistattri"+x;
+			catattlist.style.width="60%" 	;					
+			var q;							
+			for(var p=0;p<myArray.length;p++)
+			{
+			  q = myArray[p];			
+			  var cat_list= document.createElement('option');
+			  cat_list.id = "cat_item_list"+p; 
+			  cat_list.appendChild(document.createTextNode(q));  
+			  catattlist.appendChild(cat_list);	
+			}
+			if(myArray.length == 0)
+			{
+				var cat_list1= document.createElement('option');
+				cat_list1.id ="noneitem";
+				cat_list1.appendChild(document.createTextNode('--None--'));
+			    catattlist.appendChild(cat_list1);
+			}									
+			td1.appendChild(text1);  
+			tr.appendChild(td1); 
+			td2.appendChild(catattlist);
+			tr.appendChild(td2);
+			table.appendChild(tr);
+		}
+		
+		var tablediv = document.getElementById('mapping');
+		tablediv.appendChild(table);
+		tablediv.appendChild(saveButton);	
+	    tablediv.appendChild(cancleButton);
+	   document.getElementById('canclebuttn').addEventListener("click",    function() {
+	   cancelMapping();	   
+        });   
+		document.getElementById('saveMapping').addEventListener("click",    function()        {
+      	saveMapping();
+        });      
+	   }		
+	  }
+    }
+}
+	   	
+function cancelMapping(){
+	document.getElementById("cataloglist").options.length = 0;
+	document.getElementById("workflowlist").options.length = 0;
+ 	var table = document.getElementById("dynamicTable");
+	var len=table.rows.length -1;
+	for(var i=0;i<len;i++){
+	document.getElementById("cataloglistattri"+i).options.length = 0;
+	}
+	table.parentNode.removeChild(table);
+	var saveButton = document.getElementById("saveMapping");
+	saveButton.parentNode.removeChild(saveButton);
+	var cancleButton = document.getElementById("canclebuttn");
+	cancleButton.parentNode.removeChild(cancleButton);
+}
+
+function saveMapping(){
+	mapData.params.length = 0;	
+	var workflowAttrArr=[];
+	wkfl_name = document.getElementById("workflowlist").value;
+	var catalogName = document.getElementById("cataloglist").value;
+	var table = document.getElementById("dynamicTable");
+	var len = table.rows.length-1;
+	for(var i=0;i<len;i++) {
+	var paramData = {};
+	var selectedWorkflowAtrr = 	table.rows[i + 1].cells[0].innerHTML;
+	paramData['name'] = selectedWorkflowAtrr;
+	workflowAttrArr.push(selectedWorkflowAtrr);	
+	var selectedCatAtrr = document.getElementById("cataloglistattri"+i).value;
+	paramData['value']=selectedCatAtrr;
+	mapData.params.push(paramData);
+	}
+	var sourcename="";
+    var orgcode="";
+	var gr = new GlideRecord("x_aetp_vyom_automa_ae_configuration");
+gr.query();
+if (gr.next()) {
+   sourcename=gr.getValue('source');
+	orgcode=gr.getValue('organization_code');
+}
+ 	 mapData.workflowName=wkfl_name;
+  	 mapData.userId="";
+ 	 mapData.sourceId="";
+ 	 mapData.source=sourcename;
+ 	 mapData.responseMailSubject=null;
+ 	 mapData.orgCode=orgcode;
+     jsonObj[0] = mapData;
+     var mapJson = JSON.stringify(jsonObj[0]);
+	console.log('workflowAttrArr:'+workflowAttrArr);
+	var gax1 = new GlideAjax('GetWorkflow');	
+	gax1.addParam('sysparm_name','mapDataInsertion');
+	gax1.addParam('sysparm_name1', mapJson);
+	gax1.addParam('sysparm_name2',workflowAttrArr);
+	gax1.addParam('sysparm_name3', catalogName);
+	gax1.getXML(createMap);
+}
+
+function createMap(result){
+console.log('result:', result);
+	var getResult = result.responseXML.documentElement.getAttribute("answer");
+	console.log('getResult:', getResult, ' y=typeof:'+ typeof getResult);
+	if (getResult == true)
+	  alert('Mapping created successfully');
+	
+	window.history.go(-1); 
+	return false;
+}
+
+]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_aetp_vyom_automa_AE_mapping_UI.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<html>	
+<head>	
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.12/angular.min.js"></script> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+		body {
+		   font-family: SourceSansPro, "Helvetica Neue", Arial;
+		   font-size: 13px;
+		}
+		
+        th,tr {
+          text-align: center;
+        }
+      
+		.mainHeader {
+		  color: #B22222;
+		  background-color:#e7e9eb;
+		}
+		
+		#dynamicTable
+		{
+		    border-color: #e4e4e4;
+            border: 1px solid #bdc0c4;
+		
+		}
+		.dynButChng{	
+			border-color: #0368d4;
+			background-color: #278efc;
+		}
+		.dropdown-toggle{
+		    padding: 0px;
+		    background-color: transparent;
+		}
+		
+		<!-- dynamic table style-->
+		td, th {
+		  padding: 5px;
+		}
+		
+		th{
+			border-right: 1px solid;
+		    border-bottom: 1px solid;
+			border-color: #bdc0c4;
+		}
+	
+		
+		.btn-primary:hover {
+			color: #fff;
+			background-color: #278efc;
+		}
+		
+		.mapping{
+		    padding-right: 45px;
+		}
+		
+		.header_details{
+		   background-color:#dddddd;
+		}
+		hr {
+		  height: 10px;
+		  border: 0;
+		  box-shadow: 0 10px 10px -10px #8c8c8c inset;
+        }
+		#canclebuttn{
+		 float:right;
+         display:block;
+         margin-right:0px;
+		
+		}
+		#saveMapping{
+		float: right;
+          margin-left: 5px;
+		}
+	   #mainDiv{
+	    width: 900px;
+    margin: auto;
+    height: fit-content;
+	}
+		
+ </style>
+</head>	
+	
+<body onload="onLoad()">
+	
+    <!-- UI -->
+
+	
+     <div id="mainDiv">
+		
+		<!-- navbar code --> 
+    	<div class="container-fluid mainHeader">
+			<div class="navbar-header mainHeader" >
+			  <a class="navbar-brand mapping" href="x_aetp_vyom_automa_AE_mapping_console%20.do ">Back TO AE:SNOW Mapping</a>
+			</div>
+        </div>  
+				
+	   <hr></hr>
+         
+		<!-- Catalog service div-->
+		<div id="service" class="col-sm-12 "> 
+			<div class="header_details" style="box-shadow: 0 10px 10px -10px #8c8c8c inset">
+				<button class="btn dropdown-toggle " type="button"  data-toggle="collapse" data-target="#serviceRequest"><span class="glyphicon glyphicon-triangle-bottom"></span>Catalog Service</button>
+			</div>  
+					
+			<div id="serviceRequest">
+				<table id="serviceRequestTable" class ="table table-hover table-stripped table-bordered"  style="table-layout:fixed" > 
+
+			    	 <tr>
+				    	  <td class="col-sm-6"> Service Request </td>
+						  <td  class="col-sm-6"><select id="catalogreq"  style="width: 60%" onchange = "getSelectedCatlogs()"  ></select> </td>
+					 </tr>	  
+				</table>	
+			</div>
+		</div>
+					
+		<hr></hr>
+		
+		<!-- Details list of cat and workflow div--> 
+		<div id ="Details" class="col-sm-12">
+			<div class="header_details" style="box-shadow: 0 10px 10px -10px #8c8c8c inset">
+			<button class="btn dropdown-toggle" type="button" data-toggle="collapse" data-target="#details" ><span class="glyphicon glyphicon-triangle-bottom"></span>Details</button>
+						
+			</div> 
+						
+			<div id ="details">
+				<table id ="detailsTable" class ="table table-hover table-stripped table-bordered "> 
+					<tr>
+						<td  class="col-sm-6">  Catalog List </td>
+						<td class="col-sm-6">  <select id="cataloglist" style="width: 60%"  onchange="fetchCatAttr()"></select> </td>
+					</tr>	
+					<tr>
+						<td  class="col-sm-6">  Workflow List </td>
+						<td  class="col-sm-6">  <select id="workflowlist"  style="width: 60%"  onchange="fetchWorkAttr()" ></select> </td>
+					</tr>	  
+				</table>	
+			</div>		
+			    
+		</div>
+		
+		<hr></hr>
+		 
+		<!-- mapping div-->
+		<div id="map" class="col-sm-12">
+			<div class="header_details" style="box-shadow: 0 10px 10px -10px #8c8c8c inset">
+				<button class="btn dropdown-toggle " type="button" data-toggle="collapse" data-target="#dynamicTableDiv" ><span class="glyphicon glyphicon-triangle-bottom"></span>Mapping </button>
+			</div> 
+			<div id ="dynamicTableDiv">
+				<div id="mapping">
+				</div>
+					
+			</div>
+              
+		</div>
+		 
+	 		
+	</div> 	
+</body>
+</html>	
+</j:jelly>  ]]></html>
+        <name>AE_mapping_UI</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>gajananb</sys_created_by>
+        <sys_created_on>2017-10-09 06:47:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>bcf04d0cdb3d8700717cfdb61d9619b7</sys_id>
+        <sys_mod_count>488</sys_mod_count>
+        <sys_name>AE_mapping_UI</sys_name>
+        <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_update_name>sys_ui_page_bcf04d0cdb3d8700717cfdb61d9619b7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-03-22 12:47:15</sys_updated_on>
+    </sys_ui_page>
+</record_update>

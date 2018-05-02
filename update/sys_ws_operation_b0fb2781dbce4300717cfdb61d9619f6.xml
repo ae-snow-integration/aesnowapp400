@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>c2ff3399db681300b57aff971d961987</enforce_acl>
+        <http_method>POST</http_method>
+        <name>update</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	var reqBody= request.body.data;
+	var responseMessage='Record not found with Source ID - ';
+	var responseStatus='Failure';
+	var source = '';
+	var recordFound = false;
+	Object.keys(reqBody).forEach(function(item) {
+	source  = reqBody[item].sourceId;
+	var status = reqBody[item].status;
+	var AEID = reqBody[item].automationid;
+	var msg = reqBody[item].automation_status_message;
+	var gr = new GlideRecord('x_aetp_vyom_automa_ae_staging');
+	gr.addQuery('sys_id',source);
+	gr.query();
+	if(gr.hasNext()){
+		while(gr.next()) {
+			recordFound = true;
+			responseMessage = 'Record Found wih Source ID - ';
+			responseStatus = 'Success';
+			if(gr.status != 'Completed' || gr.status != 'Failure'){
+			gr.status = status;
+			gr.automationid = AEID;
+			gr.automation_status_message = msg;
+			gr.update();
+				}
+ 			}
+		}
+	});
+	response.setContentType('application/json');
+	response.setStatus(200);
+	responseMessage = responseMessage + source ;
+	var response_body = {
+		"Status": responseStatus,
+		"Status Message": responseMessage,
+	};
+	var writer = response.getStreamWriter();
+	writer.writeString(JSON.stringify(response_body));
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_aetp_vyom_automa/automationrequests</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-25 08:04:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b0fb2781dbce4300717cfdb61d9619f6</sys_id>
+        <sys_mod_count>88</sys_mod_count>
+        <sys_name>update</sys_name>
+        <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_update_name>sys_ws_operation_b0fb2781dbce4300717cfdb61d9619f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-06 06:36:07</sys_updated_on>
+        <web_service_definition display_value="automationrequests">c1f9299edb798b00b57aff971d961917</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

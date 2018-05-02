@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>true</client>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Map</name>
+        <onclick>create_json()</onclick>
+        <order>100</order>
+        <script><![CDATA[var quest_field;
+var wkfl_input;
+var wkfl_name;
+var count=0;
+var index=0;
+var jsonObj= []; 
+var mapData = {};
+mapData.params=[];
+function create_json()
+{
+	var sourcename;
+	var orgcode;
+	var ga= new GlideAjax('GetWorkflow');
+	ga.addParam('sysparm_name','getConfigData');
+	ga.getXML(getConfig);
+	function getConfig(response){
+	var configdata=[];
+	var answer= response.responseXML.documentElement.getAttribute("answer");
+		configdata = JSON.parse(answer);
+	    sourcename= configdata[0];
+		orgcode = configdata[1];
+		quest_field= g_form.getValue('u_cat_question');
+		wkfl_input= g_form.getValue('u_workflow_input');
+		wkfl_name= g_form.getValue('u_workflow_name');
+		mapData.workflowName=wkfl_name;
+		mapData.userId="";
+		mapData.sourceId="";
+		mapData.source= sourcename;
+		mapData.responseMailSubject=null;
+		mapData.orgCode= orgcode;
+		var paramData = {};
+		paramData['name']=wkfl_input;   
+		paramData['value']=quest_field;
+		mapData.params.push(paramData);
+		jsonObj[0] = mapData;
+		var test= JSON.stringify(jsonObj[0]);
+		g_form.setValue('u_json',JSON.stringify(jsonObj[0]));
+		}  
+	}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>gajananb</sys_created_by>
+        <sys_created_on>2017-09-27 06:07:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cc540f08dba14300b57aff971d96193f</sys_id>
+        <sys_mod_count>49</sys_mod_count>
+        <sys_name>Map</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_update_name>sys_ui_action_cc540f08dba14300b57aff971d96193f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-05 11:26:06</sys_updated_on>
+        <table>x_aetp_vyom_automa_ae_mapping</table>
+        <ui11_compatible>false</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

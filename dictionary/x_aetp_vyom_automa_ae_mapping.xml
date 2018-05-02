@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="AE:Mapping" max_length="40" name="x_aetp_vyom_automa_ae_mapping" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Catalog Item" max_length="40" name="u_catalog_item" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Questions" max_length="40" name="u_cat_question" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="JSON" max_length="4000" name="u_json" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" label="JSON from button" max_length="255" name="u_jsonbutton" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" label="Raw JSON" max_length="4000" name="u_raw_json" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Service Request" max_length="40" name="u_service_request" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Workflow Input" max_length="40" name="u_workflow_input" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Workflow Name" max_length="40" name="u_workflow_name" type="string">
+            <choice/>
+        </element>
+        <element label="Workflow URL" max_length="1024" name="u_workflow_url" type="url"/>
+    </element>
+</database>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="hasWorkflow=true,text_index_translations" audit="true" create_roles="catalog_admin" extends="task" label="Requested Item" max_length="40" name="sc_req_item" sizeclass="1354" text_index="true" type="collection">
+        <element label="Automated" max_length="40" name="x_aetp_vyom_automa_automated" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="JSON" max_length="4000" name="x_aetp_vyom_automa_json" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" label="SequenceNumber" max_length="40" name="x_aetp_vyom_automa_sequencenumber" type="string"/>
+        <element label="Sequential" max_length="40" name="x_aetp_vyom_automa_sequential" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="WorkflowName" max_length="40" name="x_aetp_vyom_automa_workflowname" type="string"/>
+    </element>
+</database>
