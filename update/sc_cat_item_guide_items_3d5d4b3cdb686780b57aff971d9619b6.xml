@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_cat_item_guide_items">
+    <sc_cat_item_guide_items action="INSERT_OR_UPDATE">
+        <condition/>
+        <guide display_value="AE Order guide 2">6b1dc73cdb686780b57aff971d961963</guide>
+        <ignore_mandatory_eval>false</ignore_mandatory_eval>
+        <item display_value="AE Item 3">270c4fb8db686780b57aff971d961976</item>
+        <order/>
+        <quantity>1</quantity>
+        <requested_by/>
+        <requested_for/>
+        <show_quantity>false</show_quantity>
+        <sys_class_name>sc_cat_item_guide_items</sys_class_name>
+        <sys_created_by>aishwarya.puri</sys_created_by>
+        <sys_created_on>2018-09-12 14:00:19</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3d5d4b3cdb686780b57aff971d9619b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>6b1dc73cdb686780b57aff971d961963</sys_name>
+        <sys_package display_value="AutomationEdgeOld" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AutomationEdgeOld">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_update_name>sc_cat_item_guide_items_3d5d4b3cdb686780b57aff971d9619b6</sys_update_name>
+        <sys_updated_by>aishwarya.puri</sys_updated_by>
+        <sys_updated_on>2018-09-12 14:00:19</sys_updated_on>
+        <use_sc_layout>true</use_sc_layout>
+    </sc_cat_item_guide_items>
+</record_update>

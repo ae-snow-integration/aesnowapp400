@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="AE Item 3">270c4fb8db686780b57aff971d961976</sc_cat_item>
+        <sc_category display_value="AE Category">890ae278db286780b57aff971d961960</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>aishwarya.puri</sys_created_by>
+        <sys_created_on>2018-09-12 13:55:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2b3c8ff8db686780b57aff971d961942</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AE Category.AE Item 3</sys_name>
+        <sys_package display_value="AutomationEdgeOld" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AutomationEdgeOld">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_update_name>sc_cat_item_category_2b3c8ff8db686780b57aff971d961942</sys_update_name>
+        <sys_updated_by>aishwarya.puri</sys_updated_by>
+        <sys_updated_on>2018-09-12 13:55:20</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

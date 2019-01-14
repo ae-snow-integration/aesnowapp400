@@ -17,6 +17,7 @@ function onLoad() {
 	 var url = new URL(window.location.href);
      aeNumber = url.searchParams.get("number");
          if(aeNumber !== null){ 
+			 alert("tesing....");
 		 var ga1 = new GlideAjax('GetWorkflow');
 	     ga1.addParam('sysparm_name','getprevMappedData');
 		 ga1.addParam('sysparm_name1',aeNumber);
@@ -428,9 +429,13 @@ console.log('result:', result);
 				<table id="serviceRequestTable" class ="table table-hover table-stripped table-bordered"  style="table-layout:fixed" > 
 
 			    	 <tr>
-				    	  <td class="col-sm-6"> Service Request </td>
+				    	  <td class="col-sm-6"> Service Catalog </td>
 						  <td  class="col-sm-6"><select id="catalogreq"  style="width: 60%" onchange = "getSelectedCatlogs()"  ></select> </td>
 					 </tr>	  
+					<tr>
+						<td  class="col-sm-6">  Catalog Item </td>
+						<td class="col-sm-6">  <select id="cataloglist" style="width: 60%"  onchange="fetchCatAttr()"></select> </td>
+					</tr>	
 				</table>	
 			</div>
 		</div>
@@ -447,8 +452,8 @@ console.log('result:', result);
 			<div id ="details">
 				<table id ="detailsTable" class ="table table-hover table-stripped table-bordered "> 
 					<tr>
-						<td  class="col-sm-6">  Catalog List </td>
-						<td class="col-sm-6">  <select id="cataloglist" style="width: 60%"  onchange="fetchCatAttr()"></select> </td>
+						<td  class="col-sm-6">  AE Config Name </td>
+						<td  class="col-sm-6">  <select id="configname"  style="width: 60%"  onchange="fetchAEConfigName()" ></select> </td>
 					</tr>	
 					<tr>
 						<td  class="col-sm-6">  Workflow List </td>
@@ -486,14 +491,14 @@ console.log('result:', result);
         <sys_created_on>2017-10-09 06:47:55</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bcf04d0cdb3d8700717cfdb61d9619b7</sys_id>
-        <sys_mod_count>488</sys_mod_count>
+        <sys_mod_count>491</sys_mod_count>
         <sys_name>AE_mapping_UI</sys_name>
-        <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+        <sys_package display_value="AutomationEdgeOld" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_scope display_value="AutomationEdgeOld">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_ui_page_bcf04d0cdb3d8700717cfdb61d9619b7</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-03-22 12:47:15</sys_updated_on>
+        <sys_updated_by>shweta.khajapure</sys_updated_by>
+        <sys_updated_on>2019-01-14 06:58:11</sys_updated_on>
     </sys_ui_page>
 </record_update>

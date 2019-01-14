@@ -21,6 +21,7 @@
                 <element label="Closed" sequence="0" value="8"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="Name" max_length="40" name="name" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Organization Code" mandatory="true" max_length="40" name="organization_code" type="string"/>
         <element label="Password" max_length="255" name="password" type="password2"/>

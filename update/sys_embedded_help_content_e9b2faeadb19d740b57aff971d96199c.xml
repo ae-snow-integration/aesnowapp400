@@ -4,7 +4,7 @@
         <active>true</active>
         <category/>
         <content><![CDATA[ <h1 class="title topictitle1">Detailed scorecard</h1>   <div class="body conbody"><p class="shortdesc">  </p><ul class="ul" id="zz_pa_detailed-normal__ul_ej5_wnv_fw"><li class="li">To view aggregate data, such as the monthly sum of scores, apply a time series such as      <span class="ph uicontrol">By week SUM</span>.</li><li class="li">To view the score at a certain date, click that date. After you select a date, you can     add a comment, target, or threshold at that date.</li><li class="li">To change the period for which the chart is drawn, you can select one of the fixed time     frames, specify specific <span class="ph uicontrol">from</span> and <span class="ph uicontrol">to</span> dates, or     use the date selector at the bottom of the chart.</li><li class="li">To export the scorecard to a PNG, JPG, PDF, or CSV file, click the show functions icon     and     select the format you want to export to.</li><li class="li">To access the indicator record, or to modify the scores manually, click the show functions     icon          and select <span class="ph uicontrol">Edit indicator</span> or <span class="ph uicontrol">Edit scores</span>.</li><li class="li">To control which elements appear on the chart, such as to show a trendline or confidence     band, click the chart settings     icon.</li></ul> </div>]]></content>
-        <last_sync>2018-04-24 09:09:10</last_sync>
+        <last_sync>2019-01-04 09:19:11</last_sync>
         <modifier>normal</modifier>
         <name>$pa_detailed-normal</name>
         <page>$pa_detailed</page>
@@ -18,15 +18,15 @@
         <sys_created_on>2018-04-09 09:09:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e9b2faeadb19d740b57aff971d96199c</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>$pa_detailed-normal</sys_name>
-        <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+        <sys_package display_value="AutomationEdgeOld" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_scope display_value="AutomationEdgeOld">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_embedded_help_content_e9b2faeadb19d740b57aff971d96199c</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-04-24 09:09:11</sys_updated_on>
+        <sys_updated_on>2019-01-04 09:19:11</sys_updated_on>
         <version>j</version>
     </sys_embedded_help_content>
 </record_update>

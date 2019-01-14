@@ -8,10 +8,10 @@
         <sys_id>ce129fb3db1d0300b57aff971d961934</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>x_aetp_vyom_automa_ae_mapping.x_aetp_vyom_automa.AE_Admin</sys_name>
-        <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+        <sys_package display_value="AutomationEdgeOld" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_scope display_value="AutomationEdgeOld">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_security_acl display_value="x_aetp_vyom_automa_ae_mapping">c6129fb3db1d0300b57aff971d961932</sys_security_acl>
         <sys_update_name>sys_security_acl_role_ce129fb3db1d0300b57aff971d961934</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>

@@ -16,17 +16,17 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>54e02948db6f0300510d5901cf9619d7</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>AE Workflow Metadata</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>AE Workflow Metadata old</sys_name>
         <sys_overrides/>
-        <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+        <sys_package display_value="AutomationEdgeOld" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_scope display_value="AutomationEdgeOld">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_app_application_54e02948db6f0300510d5901cf9619d7</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-03-23 11:47:54</sys_updated_on>
-        <title>AE Workflow Metadata</title>
+        <sys_updated_by>aishwarya.puri</sys_updated_by>
+        <sys_updated_on>2018-09-24 09:56:28</sys_updated_on>
+        <title>AE Workflow Metadata old</title>
         <view_name/>
     </sys_app_application>
 </record_update>

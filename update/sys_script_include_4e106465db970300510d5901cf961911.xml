@@ -33,10 +33,10 @@ Close_parent_request_parallel.prototype = {
         <sys_id>4e106465db970300510d5901cf961911</sys_id>
         <sys_mod_count>7</sys_mod_count>
         <sys_name>Close_parent_request_parallel</sys_name>
-        <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+        <sys_package display_value="AutomationEdgeOld" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy>read</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_scope display_value="AutomationEdgeOld">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_script_include_4e106465db970300510d5901cf961911</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2018-03-22 13:10:53</sys_updated_on>

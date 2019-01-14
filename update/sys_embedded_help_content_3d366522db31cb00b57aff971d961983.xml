@@ -4,7 +4,7 @@
         <active>true</active>
         <category>service-catalog</category>
         <content><![CDATA[ <h1 class="title topictitle1">Service catalog order guides</h1>  <div class="body conbody">  <p class="p"><span class="ph">Order guide submits a single service catalog request that generates          several items.</span></p>  <p class="p">For example, a New Employee Hire order guide can contain several        items that new employees commonly need, such as business cards, computer, and cell phone.        After selecting this order guide, the customer can then provide information about the new        employee, including location and job title. The order guide then submits an order for        catalog items like business cards, based on the details provided.</p> </div> <div class="related-links"><div class="relinfo"><div class="reltitle">Related information<br /><div><a class="link" href="https://docs.servicenow.com/?context&#61;CSHelp:Order-Guides&amp;version&#61;jakarta" target="_blank" rel="nofollow">Order guides</a></div></div></div></div>]]></content>
-        <last_sync>2018-04-30 04:25:11</last_sync>
+        <last_sync>2019-01-10 04:36:05</last_sync>
         <modifier>normal</modifier>
         <name>sc_cat_item_guide_list-normal</name>
         <page>sc_cat_item_guide_list</page>
@@ -18,15 +18,15 @@
         <sys_created_on>2017-10-17 03:55:07</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3d366522db31cb00b57aff971d961983</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>sc_cat_item_guide_list-normal</sys_name>
-        <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+        <sys_package display_value="AutomationEdgeOld" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_scope display_value="AutomationEdgeOld">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_embedded_help_content_3d366522db31cb00b57aff971d961983</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-04-30 04:25:11</sys_updated_on>
+        <sys_updated_on>2019-01-10 04:36:05</sys_updated_on>
         <version>j</version>
     </sys_embedded_help_content>
 </record_update>

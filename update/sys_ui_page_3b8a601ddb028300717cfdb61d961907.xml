@@ -171,7 +171,7 @@ function deleteRecordRes(response){
 			<div class="navbar-header mainHeader" >
 			  <a class="navbar-brand mapping" href="#">AE:SNOW Mapping</a> 	
 			</div>
-			 <button class="btn btn-primary" type="button" id="addNewMap"><a href="x_aetp_vyom_automa_AE_mapping_UI.do" id="newmapping">Add New</a></button>	
+			 <button class="btn btn-primary" type="button" id="addNewMap"><a href="x_aetp_vyom_automa_AE_mapping_UI.do" id="newmapping">Add New	</a></button>
         </div>  
 				
 		<hr></hr>
@@ -203,14 +203,14 @@ function deleteRecordRes(response){
         <sys_created_on>2017-10-25 12:39:56</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3b8a601ddb028300717cfdb61d961907</sys_id>
-        <sys_mod_count>163</sys_mod_count>
+        <sys_mod_count>165</sys_mod_count>
         <sys_name>AE_mapping_console</sys_name>
-        <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+        <sys_package display_value="AutomationEdgeOld" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_scope display_value="AutomationEdgeOld">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_ui_page_3b8a601ddb028300717cfdb61d961907</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-04-09 13:55:56</sys_updated_on>
+        <sys_updated_by>aishwarya.puri</sys_updated_by>
+        <sys_updated_on>2018-09-28 05:41:16</sys_updated_on>
     </sys_ui_page>
 </record_update>

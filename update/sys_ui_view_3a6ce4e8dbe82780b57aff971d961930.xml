@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>rpt-tempdbbe14f0ebe312009add4d3df106fe7dc4688050dba02780b57aff971d96190d</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>aishwarya.puri</sys_created_by>
+        <sys_created_on>2018-09-11 07:38:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3a6ce4e8dbe82780b57aff971d961930</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AutomationEdgeOld">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>aishwarya.puri</sys_updated_by>
+        <sys_updated_on>2018-09-11 07:38:34</sys_updated_on>
+        <title>Rpt-tempdbbe14f0ebe312009add4d3df106fe7dc4688050dba02780b57aff971d96190d</title>
+        <user/>
+    </sys_ui_view>
+</record_update>

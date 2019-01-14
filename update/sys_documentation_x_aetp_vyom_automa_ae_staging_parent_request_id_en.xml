@@ -16,10 +16,10 @@
             <sys_id>9e9b4022dba49300b57aff971d96195b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Parent Request Id</sys_name>
-            <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+            <sys_package display_value="AutomationEdgeOld" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-            <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+            <sys_scope display_value="AutomationEdgeOld">53dfc773db1d0300b57aff971d9619ae</sys_scope>
             <sys_update_name>sys_documentation_x_aetp_vyom_automa_ae_staging_parent_request_id_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2018-03-02 14:11:52</sys_updated_on>

@@ -8,7 +8,7 @@
         <license_model>none</license_model>
         <logo/>
         <menu/>
-        <name>AutomationEdge</name>
+        <name>AutomationEdgeOld</name>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
@@ -23,9 +23,9 @@
         <sys_created_by>gajananb</sys_created_by>
         <sys_created_on>2017-09-26 12:17:44</sys_created_on>
         <sys_id>53dfc773db1d0300b57aff971d9619ae</sys_id>
-        <sys_mod_count>20</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-04-27 08:18:53</sys_updated_on>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_updated_by>aishwarya.puri</sys_updated_by>
+        <sys_updated_on>2018-09-21 05:54:51</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>
