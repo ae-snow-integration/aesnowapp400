@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="sys_ui_action">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
         <action_name/>
         <active>true</active>
         <client>true</client>
+        <client_script_v2/>
         <comments/>
         <condition/>
         <form_action>true</form_action>
         <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
         <form_context_menu>false</form_context_menu>
         <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
         <form_style/>
         <hint/>
+        <isolate_script>false</isolate_script>
         <list_action>false</list_action>
         <list_banner_button>false</list_banner_button>
         <list_button>false</list_button>
@@ -69,7 +72,6 @@ function create_json()
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>gajananb</sys_created_by>
         <sys_created_on>2017-09-27 06:07:59</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cc540f08dba14300b57aff971d96193f</sys_id>
@@ -78,7 +80,6 @@ function create_json()
         <sys_overrides/>
         <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_ui_action_cc540f08dba14300b57aff971d96193f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>

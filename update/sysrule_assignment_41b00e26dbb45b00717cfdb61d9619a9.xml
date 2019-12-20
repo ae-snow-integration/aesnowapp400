@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="sysrule_assignment">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysrule_assignment">
     <sysrule_assignment action="INSERT_OR_UPDATE">
         <active>true</active>
         <condition table="sc_task">x_aetp_vyom_automa_automated=true^EQ<item endquery="false" field="x_aetp_vyom_automa_automated" goto="false" newquery="false" operator="=" or="false" value="true"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <description/>
-        <group display_value="AE Integration Group" name="AE Integration Group">d5460542dba85300717cfdb61d9619b3</group>
+        <group display_value="">d5460542dba85300717cfdb61d9619b3</group>
         <match_conditions>ALL</match_conditions>
         <name>Automated Assignment Rule</name>
         <order>50</order>
@@ -27,7 +26,6 @@
         <sys_class_name>sysrule_assignment</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-03-15 09:01:29</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>41b00e26dbb45b00717cfdb61d9619a9</sys_id>
@@ -36,7 +34,6 @@
         <sys_overrides/>
         <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sysrule_assignment_41b00e26dbb45b00717cfdb61d9619a9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>

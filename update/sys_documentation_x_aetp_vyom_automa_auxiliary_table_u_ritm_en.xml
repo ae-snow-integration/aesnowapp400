@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_documentation element="u_ritm" label="RITM" language="en" table="x_aetp_vyom_automa_auxiliary_table">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>u_ritm</element>
@@ -12,13 +11,11 @@
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2017-12-30 13:24:06</sys_created_on>
-            <sys_customer_update>false</sys_customer_update>
             <sys_id>bd1ea06edb530300510d5901cf9619b2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>RITM</sys_name>
             <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
             <sys_policy/>
-            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
             <sys_update_name>sys_documentation_x_aetp_vyom_automa_auxiliary_table_u_ritm_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>

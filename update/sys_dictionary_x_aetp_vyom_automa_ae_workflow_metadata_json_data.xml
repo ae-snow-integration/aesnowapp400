@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_dictionary action="INSERT_OR_UPDATE" element="json_data" table="x_aetp_vyom_automa_ae_workflow_metadata">
         <active>true</active>
         <array>false</array>
@@ -31,6 +30,8 @@
         <element>json_data</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
         <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
         <max_length>4000</max_length>
@@ -52,17 +53,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-01-04 08:56:52</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>4db0ad08db6f0300510d5901cf9619d9</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_id>a02c0428db232300b57aff971d9619fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>JSON_data</sys_name>
         <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_dictionary_x_aetp_vyom_automa_ae_workflow_metadata_json_data</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-04 10:15:33</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-02-07 08:26:07</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

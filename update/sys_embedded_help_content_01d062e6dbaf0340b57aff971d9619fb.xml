@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_embedded_help_content">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_embedded_help_content">
     <sys_embedded_help_content action="INSERT_OR_UPDATE">
         <active>true</active>
         <category>mid-server</category>
@@ -16,17 +15,18 @@
         <sys_class_name>sys_embedded_help_content</sys_class_name>
         <sys_created_by>system</sys_created_by>
         <sys_created_on>2018-01-12 08:01:06</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
         <sys_id>01d062e6dbaf0340b57aff971d9619fb</sys_id>
         <sys_mod_count>5</sys_mod_count>
         <sys_name>ecc_queue_list-normal</sys_name>
         <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_embedded_help_content_01d062e6dbaf0340b57aff971d9619fb</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
         <sys_updated_on>2018-04-27 08:04:13</sys_updated_on>
         <version>j</version>
     </sys_embedded_help_content>
+    <sys_translated_text action="delete_multiple" query="documentkey=01d062e6dbaf0340b57aff971d9619fb"/>
 </record_update>

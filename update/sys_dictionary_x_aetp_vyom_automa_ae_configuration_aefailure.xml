@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_dictionary action="INSERT_OR_UPDATE" element="aefailure" table="x_aetp_vyom_automa_ae_configuration">
         <active>true</active>
         <array>false</array>
@@ -31,6 +30,8 @@
         <element>aefailure</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
         <internal_type display_value="Choice">choice</internal_type>
         <mandatory>false</mandatory>
         <max_length>1000</max_length>
@@ -52,17 +53,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-10-26 10:30:42</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>98f615e9db0a8300717cfdb61d9619a2</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_id>6c2c4428db232300b57aff971d961910</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Request Item Status On Failure From Automation Edge</sys_name>
         <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_dictionary_x_aetp_vyom_automa_ae_configuration_aefailure</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-04-05 10:02:21</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-02-07 08:26:02</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

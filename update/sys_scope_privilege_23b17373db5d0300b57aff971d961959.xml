@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_scope_privilege">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
     <sys_scope_privilege action="INSERT_OR_UPDATE">
         <operation>read</operation>
         <source_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</source_scope>
@@ -7,13 +6,11 @@
         <sys_class_name>sys_scope_privilege</sys_class_name>
         <sys_created_by>gajananb</sys_created_by>
         <sys_created_on>2017-09-26 14:45:44</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>23b17373db5d0300b57aff971d961959</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>sc_cat_item</sys_name>
         <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_scope_privilege_23b17373db5d0300b57aff971d961959</sys_update_name>
         <sys_updated_by>gajananb</sys_updated_by>

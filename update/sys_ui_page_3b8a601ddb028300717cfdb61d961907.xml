@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_ui_page">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
         <client_script><![CDATA[function showMapRecords(){
@@ -12,9 +11,6 @@ function getTableRecords(response){
 	var dataArr= JSON.parse(getRec);
 	var table = document.getElementById("aeMappingTable");
 	for(var i=0;i<dataArr.length;i++) {
-      console.log('name:'+ dataArr[i].name);
-	  console.log('workflow:'+ dataArr[i].workflow);
-	  console.log('workflow:'+ dataArr[i].number);	
 	  var tr = document.createElement('tr');  
 	  var td1 = document.createElement('td');
 	  var td2 = document.createElement('td');
@@ -81,9 +77,9 @@ function deleteRecordRes(response){
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
 <html>	
 <head>	
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.12/angular.min.js"></script> 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></link>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <style>
 		body {
 		   font-family: SourceSansPro, "Helvetica Neue", Arial;
@@ -201,16 +197,14 @@ function deleteRecordRes(response){
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>gajananb</sys_created_by>
         <sys_created_on>2017-10-25 12:39:56</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>3b8a601ddb028300717cfdb61d961907</sys_id>
-        <sys_mod_count>163</sys_mod_count>
+        <sys_mod_count>165</sys_mod_count>
         <sys_name>AE_mapping_console</sys_name>
         <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_ui_page_3b8a601ddb028300717cfdb61d961907</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-04-09 13:55:56</sys_updated_on>
+        <sys_updated_on>2019-02-15 12:41:33</sys_updated_on>
     </sys_ui_page>
 </record_update>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_embedded_help_content">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_embedded_help_content">
     <sys_embedded_help_content action="INSERT_OR_UPDATE">
         <active>true</active>
         <category>sys-help-tours</category>
@@ -53,17 +52,18 @@
         <sys_class_name>sys_embedded_help_content</sys_class_name>
         <sys_created_by>system</sys_created_by>
         <sys_created_on>2018-04-06 08:25:10</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
         <sys_id>68eb03addbd55740b57aff971d96191c</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>sys_embedded_help_content-normal</sys_name>
         <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_embedded_help_content_68eb03addbd55740b57aff971d96191c</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
         <sys_updated_on>2018-04-21 08:26:11</sys_updated_on>
         <version>j</version>
     </sys_embedded_help_content>
+    <sys_translated_text action="delete_multiple" query="documentkey=68eb03addbd55740b57aff971d96191c"/>
 </record_update>

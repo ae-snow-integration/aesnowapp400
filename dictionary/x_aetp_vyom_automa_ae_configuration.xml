@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element label="AE:Configuration" max_length="40" name="x_aetp_vyom_automa_ae_configuration" type="collection">
         <element choice="1" label="Request Item Status On Failure From Automation Edge" max_length="1000" name="aefailure" type="choice">
             <choice>
-                <element label="Assigned" sequence="0" value="9"/>
+                <element inactive_on_update="false" label="Assigned" sequence="0" value="9"/>
             </choice>
         </element>
         <element choice="1" label="Service Request Status on Success from Automation Edge" max_length="1000" name="aereqsuccess" type="choice">
             <choice>
-                <element label="Completed" sequence="0" value="Completed"/>
+                <element inactive="true" inactive_on_update="true" label="Closed" sequence="0" value="Closed"/>
+                <element inactive_on_update="false" label="Completed" sequence="0" value="Completed"/>
             </choice>
         </element>
         <element choice="1" label="Request Item Status On Submission To Automation Edge" max_length="1000" name="aesubmitted" type="choice">
             <choice>
-                <element label="Automation In-Progress" sequence="0" value="6"/>
+                <element inactive_on_update="false" label="Automation In-Progress" sequence="0" value="6"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Request Item Status On Success From Automation Edge" max_length="40" name="aesuccess" type="string">
             <choice>
-                <element label="Closed" sequence="0" value="8"/>
+                <element inactive_on_update="false" label="Closed" sequence="0" value="8"/>
             </choice>
         </element>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
@@ -34,6 +34,9 @@
         <element label="workflowJSON" max_length="4000" name="workflowjson" type="string_full_utf8"/>
         <index name="index">
             <element name="u_fail_group"/>
+        </index>
+        <index name="index2">
+            <element name="sys_class_name"/>
         </index>
     </element>
 </database>

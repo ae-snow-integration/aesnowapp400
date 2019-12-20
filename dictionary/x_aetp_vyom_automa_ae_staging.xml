@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element label="AE:Staging" max_length="40" name="x_aetp_vyom_automa_ae_staging" type="collection">
         <element label="AutomationID" max_length="40" name="automationid" type="string"/>
         <element label="Automation Status Message" max_length="1000" name="automation_status_message" type="string"/>
@@ -7,10 +6,10 @@
         <element attributes="edge_encryption_enabled=true" label="Parent Request Id" max_length="40" name="parent_request_id" type="string"/>
         <element choice="3" default="New" label="Status" max_length="1000" name="status" type="choice">
             <choice>
-                <element label="New" sequence="0" value="New"/>
-                <element label="InProgress" sequence="1" value="InProgress"/>
-                <element label="Completed" sequence="2" value="Completed"/>
-                <element label="Failure" sequence="3" value="Failure"/>
+                <element inactive_on_update="false" label="New" sequence="0" value="New"/>
+                <element inactive_on_update="false" label="InProgress" sequence="1" value="InProgress"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="Completed"/>
+                <element inactive_on_update="false" label="Failure" sequence="3" value="Failure"/>
             </choice>
         </element>
         <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
@@ -19,5 +18,8 @@
         <element attributes="edge_encryption_enabled=true" label="JSON" max_length="4000" name="u_string_full_utf8_1" type="string_full_utf8"/>
         <element attributes="edge_encryption_enabled=true" label="Workflow Name" max_length="40" name="u_workflow_name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Workflow URL" max_length="40" name="u_workflow_url" type="string"/>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
     </element>
 </database>
