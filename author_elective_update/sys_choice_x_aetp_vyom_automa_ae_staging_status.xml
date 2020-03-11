@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="DELETE" field="status" table="x_aetp_vyom_automa_ae_staging" version="3">
+        <sys_choice_set action="DELETE">
+            <element>status</element>
+            <name>x_aetp_vyom_automa_ae_staging</name>
+            <sys_class_name/>
+            <sys_created_by/>
+            <sys_created_on/>
+            <sys_id/>
+            <sys_mod_count/>
+            <sys_name/>
+            <sys_package/>
+            <sys_policy/>
+            <sys_scope/>
+            <sys_update_name/>
+            <sys_updated_by/>
+            <sys_updated_on>2020-03-11 17:01:20</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application/>
+        <file_path/>
+        <instance_id>481056a5db7b3ac8cbf6d5b0cf961922</instance_id>
+        <instance_name>ven02110</instance_name>
+        <name>sys_choice_x_aetp_vyom_automa_ae_staging_status</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_choice action="DELETE" field="status" table="x_aetp_vyom_automa_ae_staging" version="3"><sys_choice_set action="DELETE"><element>status</element><name>x_aetp_vyom_automa_ae_staging</name><sys_class_name/><sys_created_by/><sys_created_on/><sys_id/><sys_mod_count/><sys_name/><sys_package/><sys_policy/><sys_scope/><sys_update_name/><sys_updated_by/><sys_updated_on>2020-03-11 17:01:20</sys_updated_on></sys_choice_set></sys_choice></record_update>]]></payload>
+        <payload_hash>29654620</payload_hash>
+        <record_name>x_aetp_vyom_automa_ae_staging.status</record_name>
+        <reverted_from/>
+        <source>144c04e0db232300b57aff971d961902</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>adarsh.sharma</sys_created_by>
+        <sys_created_on>2020-03-11 17:01:20</sys_created_on>
+        <sys_id>27daa7a8dbef0410717cfdb61d9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>170ca8b209b0000001</sys_recorded_at>
+        <sys_updated_by>adarsh.sharma</sys_updated_by>
+        <sys_updated_on>2020-03-11 17:01:20</sys_updated_on>
+        <type>Choice list</type>
+        <update_guid>afdaa7a8e8ef0410614e8fd9d17993d3</update_guid>
+        <update_guid_history>afdaa7a8e8ef0410614e8fd9d17993d3:29654620,63daa7a88def0410e75432e76b7923d1:275621241,ebdaa7a84def0410d59c8eed136312ce:1308700509,a7daa7a875ef04108dee5c4849a76fcc:-1067977638,b83cc8283723230033303b39324bbe3e:1827720826</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>adarsh.sharma</sys_created_by>
+        <sys_created_on>2020-03-11 17:02:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_choice_set">sys_choice_set</sys_db_object>
+        <sys_id>030be3e8dbef0410717cfdb61d9619bc</sys_id>
+        <sys_metadata>030be3e8dbef0410717cfdb61d9619bc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>status</sys_name>
+        <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
+        <sys_scope_delete display_value="">76af9a986f9546c481daf35166351129</sys_scope_delete>
+        <sys_update_name>sys_choice_x_aetp_vyom_automa_ae_staging_status</sys_update_name>
+        <sys_update_version display_value="sys_choice_x_aetp_vyom_automa_ae_staging_status">27daa7a8dbef0410717cfdb61d9619d4</sys_update_version>
+        <sys_updated_by>adarsh.sharma</sys_updated_by>
+        <sys_updated_on>2020-03-11 17:02:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

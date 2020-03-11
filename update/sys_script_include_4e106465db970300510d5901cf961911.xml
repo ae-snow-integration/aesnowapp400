@@ -3,6 +3,7 @@
         <access>package_private</access>
         <active>true</active>
         <api_name>x_aetp_vyom_automa.Close_parent_request_parallel</api_name>
+        <caller_access/>
         <client_callable>false</client_callable>
         <description/>
         <name>Close_parent_request_parallel</name>

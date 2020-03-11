@@ -15,8 +15,8 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_aetp_vyom_automa_ae_staging">status=Completed^ORstatus=Failure^EQ<item endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="Completed"/>
-            <item endquery="false" field="status" goto="false" newquery="false" operator="=" or="true" value="Failure"/>
+        <filter_condition table="x_aetp_vyom_automa_ae_staging">status=Completed^ORstatus=Failure^EQ<item display_value="Completed" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="Completed"/>
+            <item display_value="Failure" endquery="false" field="status" goto="false" newquery="false" operator="=" or="true" value="Failure"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>

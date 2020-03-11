@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app">
     <sys_app action="INSERT_OR_UPDATE">
         <active>true</active>
+        <can_edit_in_studio>false</can_edit_in_studio>
         <enforce_license>log</enforce_license>
+        <guided_setup_guid/>
         <js_level>helsinki_es5</js_level>
         <licensable>true</licensable>
         <license_category/>
@@ -23,14 +25,14 @@
         <sys_created_by>gajananb</sys_created_by>
         <sys_created_on>2017-09-26 12:17:44</sys_created_on>
         <sys_id>53dfc773db1d0300b57aff971d9619ae</sys_id>
-        <sys_mod_count>23</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-12-20 19:12:56</sys_updated_on>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_updated_by>adarsh.sharma</sys_updated_by>
+        <sys_updated_on>2020-03-11 17:05:17</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>4.0.6</version>
+        <version>4.0.7</version>
     </sys_app>
 </record_update>
