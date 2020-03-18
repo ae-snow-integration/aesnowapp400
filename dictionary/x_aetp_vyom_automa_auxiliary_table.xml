@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="hasLabels=true" label="Auxiliary Table" max_length="40" name="x_aetp_vyom_automa_auxiliary_table" type="collection">
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element default="CHF;0.00" label="Test" max_length="20" name="test" type="currency"/>
         <element attributes="edge_encryption_enabled=true" label="Request" max_length="40" name="u_request" type="string"/>
         <element label="Resolved" max_length="40" name="u_resolved" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" label="RITM" max_length="40" name="u_ritm" type="string"/>

@@ -27,19 +27,20 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-	var ritm = current.request_item;
-	var isAutomated = '';
-	var gr = new GlideRecord("sc_req_item");
-	gr.get(ritm);
-	if (gr.next()){
-		isAutomated = gr.x_aetp_vyom_automa_automated;
-		if(isAutomated){
-			current.x_aetp_vyom_automa_automated = isAutomated;
-			current.assignment_group.setDisplayValue('');
-			current.update();
-		}	
-	}
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    var ritm = current.request_item;
+    var isAutomated = '';
+    var gr = new GlideRecord("sc_req_item");
+    if (gr.get(ritm)) {
+        if (gr.next()) {
+            isAutomated = gr.x_aetp_vyom_automa_automated;
+            if (isAutomated) {
+                current.x_aetp_vyom_automa_automated = isAutomated;
+                current.assignment_group.setDisplayValue('');
+                current.update();
+            }
+        }
+    }
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>gajananb</sys_created_by>
@@ -47,7 +48,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8181f61cdbeb4f00717cfdb61d961983</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>AE_UpdateAutmoatedFlagonTask</sys_name>
         <sys_overrides/>
         <sys_package display_value="AutomationEdge" source="x_aetp_vyom_automa">53dfc773db1d0300b57aff971d9619ae</sys_package>
@@ -55,7 +56,7 @@
         <sys_scope display_value="AutomationEdge">53dfc773db1d0300b57aff971d9619ae</sys_scope>
         <sys_update_name>sys_script_8181f61cdbeb4f00717cfdb61d961983</sys_update_name>
         <sys_updated_by>adarsh.sharma</sys_updated_by>
-        <sys_updated_on>2019-07-03 13:29:12</sys_updated_on>
+        <sys_updated_on>2020-03-18 09:58:39</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
